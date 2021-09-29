@@ -30,11 +30,10 @@ namespace UserMaintenance
         private void InitializeComponent()
         {
             this.listUsers = new System.Windows.Forms.ListBox();
-            this.labelLastName = new System.Windows.Forms.Label();
-            this.labelFirstName = new System.Windows.Forms.Label();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.labelFullName = new System.Windows.Forms.Label();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonWrite = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listUsers
@@ -45,41 +44,25 @@ namespace UserMaintenance
             this.listUsers.Size = new System.Drawing.Size(184, 238);
             this.listUsers.TabIndex = 0;
             // 
-            // labelLastName
+            // labelFullName
             // 
-            this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(202, 12);
-            this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(35, 13);
-            this.labelLastName.TabIndex = 1;
-            this.labelLastName.Text = "label1";
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.Location = new System.Drawing.Point(202, 12);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(35, 13);
+            this.labelFullName.TabIndex = 1;
+            this.labelFullName.Text = "label1";
             // 
-            // labelFirstName
+            // txtFullName
             // 
-            this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(202, 38);
-            this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(35, 13);
-            this.labelFirstName.TabIndex = 2;
-            this.labelFirstName.Text = "label2";
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.Location = new System.Drawing.Point(276, 9);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(127, 20);
-            this.txtLastName.TabIndex = 3;
-            // 
-            // txtFirstName
-            // 
-            this.txtFirstName.Location = new System.Drawing.Point(276, 35);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(127, 20);
-            this.txtFirstName.TabIndex = 4;
+            this.txtFullName.Location = new System.Drawing.Point(276, 9);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(127, 20);
+            this.txtFullName.TabIndex = 3;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(202, 69);
+            this.buttonAdd.Location = new System.Drawing.Point(202, 42);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(201, 36);
             this.buttonAdd.TabIndex = 5;
@@ -87,16 +70,25 @@ namespace UserMaintenance
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // buttonWrite
+            // 
+            this.buttonWrite.Location = new System.Drawing.Point(202, 84);
+            this.buttonWrite.Name = "buttonWrite";
+            this.buttonWrite.Size = new System.Drawing.Size(201, 36);
+            this.buttonWrite.TabIndex = 6;
+            this.buttonWrite.Text = "button1";
+            this.buttonWrite.UseVisualStyleBackColor = true;
+            this.buttonWrite.Click += new System.EventHandler(this.buttonWrite_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 261);
+            this.Controls.Add(this.buttonWrite);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.txtFirstName);
-            this.Controls.Add(this.txtLastName);
-            this.Controls.Add(this.labelFirstName);
-            this.Controls.Add(this.labelLastName);
+            this.Controls.Add(this.txtFullName);
+            this.Controls.Add(this.labelFullName);
             this.Controls.Add(this.listUsers);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -108,11 +100,10 @@ namespace UserMaintenance
         #endregion
 
         private System.Windows.Forms.ListBox listUsers;
-        private System.Windows.Forms.Label labelLastName;
-        private System.Windows.Forms.Label labelFirstName;
-        private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.Label labelFullName;
+        private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonWrite;
     }
 }
 
