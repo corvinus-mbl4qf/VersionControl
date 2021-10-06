@@ -34,6 +34,7 @@ namespace UserMaintenance
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonWrite = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listUsers
@@ -80,11 +81,22 @@ namespace UserMaintenance
             this.buttonWrite.UseVisualStyleBackColor = true;
             this.buttonWrite.Click += new System.EventHandler(this.buttonWrite_Click);
             // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(322, 213);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(81, 36);
+            this.buttonDelete.TabIndex = 7;
+            this.buttonDelete.Text = "button1";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 261);
+            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonWrite);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.txtFullName);
@@ -104,6 +116,7 @@ namespace UserMaintenance
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonWrite;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }
 
