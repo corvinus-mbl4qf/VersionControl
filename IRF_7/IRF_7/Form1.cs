@@ -43,7 +43,7 @@ namespace IRF_7
 
             foreach (Ball ball in _balls)
             {
-                ball.MoveBall();
+                ball.MoveToy();
                 if (ball.Left > maxPosition)
                     maxPosition = ball.Left;
             }
