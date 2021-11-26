@@ -11,21 +11,30 @@ namespace UnitTestExample.Test
     {
         [
             Test,
-            TestCase("abcd1234", false),
-            TestCase("irf@uni-corvinus", false),
-            TestCase("irf.uni-corvinus.hu", false),
-            TestCase("irf@uni-corvinus.hu", true)
+            TestCase("irf@uni-corvinus", "Abcd1234"),
+            TestCase("irf.uni-corvinus.hu", "Abcd1234"),
+            TestCase("irf@uni-corvinus.hu", "abcd1234"),
+            TestCase("irf@uni-corvinus.hu", "ABCD1234"),
+            TestCase("irf@uni-corvinus.hu", "abcdABCD"),
+            TestCase("irf@uni-corvinus.hu", "Ab1234"),
         ]
-        public void TestValidateEmail(string email, bool expectedResult)
+        public void TestRegisterValidateException(string email, string password)
         {
             // Arrange
             var accountController = new AccountController();
 
             // Act
-            var actualResult = accountController.ValidateEmail(email);
+            try
+            {
+                var actualResult = accountController.Register(email, password);
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOf<ValidationException>(ex);
+            }
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
